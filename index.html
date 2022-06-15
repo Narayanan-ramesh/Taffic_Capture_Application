@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ken cameron">
+    <title>Traffic Recorder</title>
+
+    <!-- Bootstrap core CSS -->
+<script src="js/traffic.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+.btn {
+margin:4px;
+padding:0;
+}
+
+input {padding:0;margin:0;}
+label {width:100%;;padding:0;margin:0;}
+
+
+
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  
+  </hr>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h1>Traffic Capture</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="usernamein">Username</label>
+          <input type="text" class="form-control" id="ofUser" placeholder="Enter Username">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="passwordin">Password</label>
+          <input type="password" class="form-control" id="ofPassword" placeholder="Password">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          &nbsp;
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary btn-block" onclick="command_login();return false;"><h2>Login</h2></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+        <br>
+        <div id="message" style="color:red;margin:5%;padding:4px;background:#dddddd;">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+</div>
+</main>
+
+<footer class="footer mt-auto py-3">
+  <div class="container">
+<span style="text-align:right;width100%;"><h1>Total Recorded: <span id="total">--</span></h1></span>
+  </div>
+</footer>
+</body>
+</html>

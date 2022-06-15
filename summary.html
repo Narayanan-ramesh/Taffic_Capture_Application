@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ken cameron">
+    <title>Traffic Recorder</title>
+
+    <!-- Bootstrap core CSS -->
+<script src="js/traffic.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+.btn {
+margin:4px;
+padding:0;
+}
+
+input {padding:0;margin:0;}
+label {width:100%;;padding:0;margin:0;}
+
+
+
+    </style>
+</head>
+<body class="d-flex flex-column h-100" onload="command_summary();">
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  
+  </hr>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h1>Traffic Capture</h1>
+        </div>
+      </div>
+      <div class="row"><div class="col">&nbsp;</div></div>
+      <div class="row"><div class="col">Cars: <span id="sum_car">--</span></div></div>
+      <div class="row"><div class="col">Taxi: <span id="sum_taxi">--</span></div></div>
+      <div class="row"><div class="col">Bus: <span id="sum_bus">--</span></div></div>
+      <div class="row"><div class="col">Bicycle: <span id="sum_bicycle">--</span></div></div>
+      <div class="row"><div class="col">Motorbike: <span id="sum_motorbike">--</span></div></div>
+      <div class="row"><div class="col">Van: <span id="sum_van">--</span></div></div>
+      <div class="row"><div class="col">Truck: <span id="sum_truck">--</span></div></div>
+      <div class="row"><div class="col">Other: <span id="sum_other">--</span></div></div>
+      <div class="row"><div class="col">&nbsp;</div></div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary btn-block" onclick="window.location.href='/page.html'"><h2>Add Traffic</h2></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          &nbsp;
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary btn-block" onclick="window.location.href='/statistics/traffic.csv'"><h2>Download Traffic Summary File</h2></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary btn-block" onclick="window.location.href='/statistics/hours.csv'"><h2>Download Worked Hours File</h2></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary btn-block" onclick="command_logout();return false;"><h2>Logout</h2></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+        <br>
+        <div id="message" style="color:red;margin:5%;padding:4px;background:#dddddd;">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+</div>
+</main>
+
+<footer class="footer mt-auto py-3">
+  <div class="container">
+<span style="text-align:right;width100%;"><h1>Total Recorded: <span id="total">--</span></h1></span>
+  </div>
+</footer>
+</body>
+</html>

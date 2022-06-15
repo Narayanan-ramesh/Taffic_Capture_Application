@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ken cameron">
+    <title>Traffic Recorder</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/traffic.js"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+.btn {
+margin:4px;
+padding:0;
+}
+
+input {padding:0;margin:0;}
+label {width:100%;;padding:0;margin:0;}
+
+
+
+    </style>
+    <!-- Custom styles for this template -->
+  </head>
+  <body class="d-flex flex-column h-100">
+    <!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  
+  </hr>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-10">
+          <h1>Traffic Capture</h1>
+        </div>
+        <div class="col-2">
+        <button type="submit" class="btn btn-primary btn-block" onClick="command_back();return false;"><h1>X</h1></button>
+        </div>
+      </div>
+</div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h2>Location:</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" id="ofLocation" placeholder="Enter Location">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2>Vehicle Type:</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label class="btn btn-primary"><input type="radio" name="ofType" value="car" checked><br>Car</label>
+        </div>
+        <div class="col">
+          <label class="btn btn-primary"><input type="radio" name="ofType" value="bus"><br>Bus</label>
+        </div>
+        <div class="col">
+          <label class="btn btn-primary"><input type="radio" name="ofType" value="bicycle"><br>Bicycle</label>
+        </div>
+        <div class="col">
+        <label class="btn btn-primary"><input type="radio" name="ofType" value="motorbike"><br>Motorbike</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label class="btn btn-primary"><input type="radio" name="ofType" value="van"><br>Van</label>
+        </div>
+        <div class="col">
+          <label class="btn btn-primary"><input type="radio" name="ofType" value="truck"><br>Truck</label>
+        </div>
+        <div class="col">
+          <label class="btn btn-primary"><input type="radio" name="ofType" value="taxi"><br>Taxi</label>
+        </div>
+        <div class="col">
+          <label class="btn btn-primary"><input type="radio" name="ofType" value="other"><br>Other</label>
+        </div>
+      </div>
+<div class="row">
+        <div class="col">
+  <h2>Occupancy:</h2>
+</div>
+</div>
+      <div class="row">
+        <div class="col">
+          <label class="btn btn-primary"><input type="radio" name="ofOccupancy" value="1" checked><br>1/25%</label>
+        </div>
+        <div class="col">
+          <label class="btn btn-primary"><input type="radio" name="ofOccupancy" value="2"><br>2/50%</label>
+        </div>
+        <div class="col">
+          <label class="btn btn-primary"><input type="radio" name="ofOccupancy" value="3"><br>3/75%</label>
+        </div>
+        <div class="col">
+          <label class="btn btn-primary"><input type="radio" name="ofOccupancy" value="4"><br>4+/100%</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2>Record</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+        <button type="submit" class="btn btn-primary btn-block" onClick="command_undo();return false;"><h2>Undo</h2></button>
+        </div>
+        <div class="col-9">
+        <button type="submit" class="btn btn-primary btn-block" onClick="command_add();"><h2>Add</h2></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+        <br>
+        <div id="message" style="color:red;margin:5%;padding:4px;background:#dddddd;">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+</div>
+</main>
+
+<footer class="footer mt-auto py-3">
+  <div class="container">
+<span style="text-align:right;width100%;"><h1>Total Recorded: <span id="total">--</span></h1></span>
+  </div>
+</footer>
+</body>
+</html>

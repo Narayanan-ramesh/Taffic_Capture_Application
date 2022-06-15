@@ -1,0 +1,16 @@
+CREATE DATABASE traffic;
+USE TRAFFIC;
+CREATE TABLE IF NOT EXISTS users (userid INTEGER PRIMARY KEY, username TEXT NOT NULL, password TEXT NOT NULL)
+CREATE TABLE IF NOT EXISTS session (sessionid INTEGER PRIMARY KEY, userid INTEGER, magic TEXT NOT NULL, start INTEGER, end INTEGER)
+CREATE TABLE IF NOT EXISTS traffic (recordid INTEGER PRIMARY KEY, sessionid INTEGER, time INTEGER, type INTEGER, occupancy INTEGER, location TEXT NOT NULL, mode INTEGER)
+INSERT INTO users VALUES(1,'test1','password1')
+INSERT INTO users VALUES(1,'test2','password2')
+INSERT INTO users VALUES(1,'test3','password3')
+INSERT INTO users VALUES(1,'test4','password4')
+INSERT INTO users VALUES(1,'test5','password5')
+INSERT INTO users VALUES(1,'test6','password6')
+INSERT INTO users VALUES(1,'test7','password7')
+INSERT INTO users VALUES(1,'test8','password8')
+INSERT INTO users VALUES(1,'test9','password9')
+INSERT INTO users VALUES(1,'test10','password10')
+
